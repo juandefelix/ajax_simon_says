@@ -5,7 +5,8 @@ $(document).ready(function(){
       url: '/color',
       type: "POST",
       success: function(response) {
-        $('li:eq(' + response.cell +')').css('background-color', '' + response.color + '');
+        console.log(response.cell);
+        $('li:eq(' + (response.cell - 1)+')').css('background-color', '' + response.color + '');
       },
       dataType: "json"
 
